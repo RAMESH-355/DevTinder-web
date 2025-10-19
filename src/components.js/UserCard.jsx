@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { BASE_URL } from "../Utils.js/constants";
 import axios from "axios";
 import { removeUserFromFeed } from "../Utils.js/feedSlice";
+axios.defaults.withCredentials = true;
 
 const UserCard = ({user}) => {
     const {_id, firstName, lastName, age, gender, photoURL, about} = user;

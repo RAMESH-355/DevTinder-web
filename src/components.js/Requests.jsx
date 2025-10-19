@@ -3,6 +3,7 @@ import { BASE_URL } from "../Utils.js/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequests, removeRequest } from "../Utils.js/requestSlice";
 import { useEffect } from "react";
+axios.defaults.withCredentials = true;
 
 const Requests = () => {
   const requests = useSelector(store => store.requests);

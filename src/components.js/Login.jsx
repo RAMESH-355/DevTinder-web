@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../Utils.js/userSlice";
 import { BASE_URL } from "../Utils.js/constants";
+axios.defaults.withCredentials = true;
 
 const Login = () => {
 

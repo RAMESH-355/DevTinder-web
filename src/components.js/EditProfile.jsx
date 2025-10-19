@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BASE_URL } from "../Utils.js/constants";
 import { addUser } from "../Utils.js/userSlice";
+axios.defaults.withCredentials = true;
 
 const EditProfile = ({user}) => {
 

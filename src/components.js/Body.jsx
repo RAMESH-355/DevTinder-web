@@ -6,6 +6,7 @@ import { BASE_URL } from "../Utils.js/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser } from "../Utils.js/userSlice";
+axios.defaults.withCredentials = true;
 
 const Body = () => {
   const dispatch = useDispatch();

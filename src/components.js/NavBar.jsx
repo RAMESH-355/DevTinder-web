@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../Utils.js/constants";
 import { removeUser } from "../Utils.js/userSlice";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 const NavBar = () => {
   const user = useSelector((store) => store.user);

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "../Utils.js/constants";
+axios.defaults.withCredentials = true;
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../Utils.js/connections";

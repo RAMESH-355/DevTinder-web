@@ -4,6 +4,7 @@ import { addFeed } from "../Utils.js/feedSlice";
 import { useEffect } from "react";
 import axios from "axios";
 import UserCard from "./UserCard";
+axios.defaults.withCredentials = true;
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed); 
