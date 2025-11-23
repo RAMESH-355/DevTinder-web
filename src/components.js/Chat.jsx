@@ -17,9 +17,6 @@ const Chat = () => {
   const socketRef = useRef(null);
   const bottomRef = useRef(null);
 
-  // -----------------------------
-  // 1. Fetch previous chat messages
-  // -----------------------------
   const fetchChatMessages = async () => {
     if (!userId || !targetUserId) return;
 
@@ -44,9 +41,6 @@ const Chat = () => {
     if (userId && targetUserId) fetchChatMessages();
   }, [userId, targetUserId]);
 
-  // -----------------------------
-  // 2. Create socket connection ONCE
-  // -----------------------------
   useEffect(() => {
     if (!userId || !targetUserId) return;
 
@@ -66,9 +60,6 @@ const Chat = () => {
     };
   }, [userId, targetUserId]);
 
-  // -----------------------------
-  // 3. Send message through SAME socket
-  // -----------------------------
   const sendMessage = () => {
     if (!newMessage.trim()) return;
 
@@ -83,9 +74,6 @@ const Chat = () => {
     setNewMessage("");
   };
 
-  // -----------------------------
-  // 4. Auto-scroll on new messages
-  // -----------------------------
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
